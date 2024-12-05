@@ -1,0 +1,352 @@
+
+body {
+   
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 170px;
+   
+    
+      
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    height: 120px;
+    color: black;
+    font-family: montserrat;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    font-family: montserrat;
+    height: 80px;
+}
+
+.parrafo {
+    font-size: 22px;
+    font-family: montserrat;
+    margin-left: 20px;
+}
+  
+
+.header {
+    font-family: montserrat;
+    background-color: #24262b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 80px;
+    width: auto;
+    transition: all 0.3;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+    
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.header .nav-links li a:hover{
+    color: deeppink;
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: #24262b;
+    padding: 9px 25px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: deeppink;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+      
+.btn button{
+    font-weight: 700;
+    color: #ffffff;
+    padding: 9px 25px;
+    background: deeppink;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.btn button:hover{
+    background-color: deeppink;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+
+
+main {
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+
+}
+
+section h2 {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+
+
+body {
+    
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  
+}
+
+
+
+.top {
+  text-align: center;
+  color: #333;
+  font-size: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.ranking-list {
+  list-style-type: none;
+  padding: 20px;
+  
+}
+
+.anime-info {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-top {
+    margin-right: 10px;
+}
+
+.rank {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.anime-details {
+display: flex;
+margin-right: 10px;
+align-items: center;
+}
+
+.anime-details h2 {
+  margin-top: 0;
+}
+
+.anime-details img {
+  max-width: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.anime-details p {
+  margin-bottom: 0;
+}
+
+  
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  
+
+
+
+
+
+
+.anime-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    
+    
+}
+
+.anime-card h3 {
+    margin-top: 0;
+    
+}
+
+.anime-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.anime-card img:hover {
+    transform: scale(1.2);
+}
+
+.anime-card p {
+    margin-bottom: 10px;
+}
+
+.anime-card a {
+    display: inline-block;
+    background-color: deeppink;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.anime-card a:hover {
+    background-color: blueviolet;
+    transform: scale(1.2);
+}
+
+.lista li {
+    display: inline-block;
+    padding: 0 20px;
+    
+}
+
+.ranking-list img:hover{
+    transform: scale(1.2);
+    
+}
+
+
+
+
+.container {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 20px 0;
+    height: 165px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 500;
+    border-bottom: 2px solid deeppink;
+    padding-bottom: 10px;
+    display: inline-block;
+
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease ;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+    padding-left: 6px;
+}
+
+.social-link a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+.social-link a:hover{
+    background-color: deeppink;
+}
+
+@media(max-width:991px){
+    .footer-row{
+        text-align: center;
+    }
+
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

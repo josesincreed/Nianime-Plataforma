@@ -1,0 +1,77 @@
+body {
+    background-image: url(imagenes/fondo\ anime.jpg);
+}
+
+.container-cuenta {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px;
+  }
+  
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .profile-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .profile-info img:hover{
+    transform: scale(1.2);
+  }
+  
+  .profile-info h2 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .profile-info p {
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .favorite-animes {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .favorite-animes h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .anime {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .anime img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .anime p {
+    margin-top: 5px;
+    text-align: center;
+    color: #666;
+  }
+
+  .anime img:hover {
+    transform: scale(1.2);
+  }

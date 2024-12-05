@@ -1,0 +1,223 @@
+body {
+    font-family: montserrat;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 3;
+    min-height: 100vh;
+    background-image: url(imagenes/imagen-fondo-1.jpg);
+   }
+   
+   .logo{
+    display: flex;
+   
+   }
+   
+   .icono{
+       width: 165px;
+       margin-left: 15px;
+       margin-top: 10px;
+   }
+   
+   .icono:hover {
+       transform: scale(1.1);
+   }
+   
+   .uttc {
+       font-family: montserrat;
+       font-size: 65px;
+       font-weight: 700;
+       margin-left: 0px;
+       margin-top: 60px;
+       color: deeppink;
+   }
+   
+   .uttc:hover{
+       transform: scale(1.1);
+       color: blueviolet;
+   }
+   
+   .formulario{
+       position: absolute;
+       top: 37%;
+       left: 50%;
+       
+       transform: translate(-50%, -50%);
+       width: 400px;
+       height: 420px;
+       background: white;
+       border-radius: 10px;
+       
+   }
+
+  
+   
+   .formulario h1{
+       text-align: center;
+       padding: 0 0 20px 0;
+       border-bottom: 1px solid silver;
+       color: deeppink;
+   }
+   
+   .formulario form{
+       padding: 0 40px;
+       box-sizing: border-box;
+   }
+   
+   form .correo{
+       position: relative;
+       border-bottom: 2px solid #adadad;
+       margin: 30px 0;
+   }
+   
+   .correo input{
+       width: 100%;
+       padding: 0 5px;
+       height: 40px;
+       font-size: 16 px;
+       border: none;
+       outline: none;
+   }
+   form .contraseña{
+       position: relative;
+       border-bottom: 2px solid #adadad;
+       margin: 30px 0;
+   }
+   
+   .contraseña input{
+       width: 100%;
+       padding: 0 5px;
+       height: 40px;
+       font-size: 16 px;
+       border: none;
+       outline: none;
+   }
+   
+   .recordar{
+       margin: -5px 0 20px 5px;
+       color: blue;
+       cursor: pointer;
+   }
+   
+   .recordar:hover{
+       text-decoration: underline;
+   }
+   
+   .boton{
+       width: 100%;
+       height: 50px;
+       border: 1px solid;
+       background: #24262b ;
+       border-radius: 25px;
+       font-size: 25px;
+       color: #fff;
+       cursor: pointer;
+       outline: none;
+       font-weight: 800;
+       padding: 10px 80px;
+       display: block;
+   }
+   
+   .boton:hover{
+       border-color: purple;
+       transition: .5s;
+       
+   }
+   
+   .boton a{
+       color: white;
+       text-decoration: none;
+   }
+   
+   .registrarse a{
+       margin: -5px 0 20px 5px;
+       text-align: center;
+       font-size: 16px;
+       color: blue;
+       text-decoration: none;
+       
+   }
+   .registrarse a:hover{
+       text-decoration: underline;
+       
+   }
+   
+   .container {
+       font-family: sans-serif;
+       text-transform: capitalize;
+       max-width: 1200px;
+       margin: 0 auto;
+       display: flex;
+       flex-wrap: wrap;
+   }
+   
+   .footer {
+       background-color: #24262b;
+       padding: 20px 0;
+       height: 165px;
+       position: absolute;
+       bottom: 0;
+       width: 100%;
+   }
+   
+   .footer-row {
+       display: flex;
+       flex-wrap: wrap;
+   }
+   
+   .footer-links {
+       width: 25%;
+       padding: 0 15px;
+   }
+   
+   .footer-links h4{
+       font-size: 20px;
+       color: #ffffff;
+       font-weight: 500;
+       border-bottom: 2px solid deeppink;
+       padding-bottom: 10px;
+       display: inline-block;
+   
+   }
+   
+   .footer-links ul li a {
+       font-size: 18px;
+       text-decoration: none;
+       color: #BBBBBB;
+       display: block;
+       margin-bottom: 15px;
+       transition: all .3s ease ;
+   }
+   
+   .footer-links ul li a:hover {
+       color: #ffffff;
+       padding-left: 6px;
+   }
+   
+   .social-link a {
+       display: inline-block;
+       min-height: 40px;
+       width: 40px;
+       background-color: rgba(255, 255, 255, 0.2);
+       margin: 0 10px 0;
+       text-align: center;
+       line-height: 40px;
+       border-radius: 50%;
+       color: #ffffff;
+       transition: all .5s ease;
+   }
+   
+   .social-link a:hover{
+       background-color: deeppink;
+   }
+   
+   @media(max-width:991px){
+       .footer-row{
+           text-align: center;
+       }
+   
+       .footer-links{
+           width: 100%;
+           margin-bottom: 30px;
+       }
+   }
+   
