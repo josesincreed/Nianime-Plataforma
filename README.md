@@ -1,0 +1,2 @@
+NIANIME busca ofrecer una experiencia de streaming de alta calidad, enfocada en la transmisión de contenido animado. Para garantizar que el diseño sea atractivo y funcional, se propone implementar Figma como herramienta principal para el desarrollo de interfaces de usuario (UI) y prototipos interactivos.
+Figma es una herramienta basada en la web que permite diseñar, colaborar y probar prototipos de manera eficiente, siendo ideal para proyectos de desarrollo colaborativo como NIANIME.
