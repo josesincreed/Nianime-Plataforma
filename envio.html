@@ -12,7 +12,8 @@
     <meta name="author" content="David Ortega Vergara">
     <meta name="robot" content="index">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="cuenta.css">
+    <link rel="stylesheet" href="envio.css">
+    
 </head>
 <body>
     <header class="header">
@@ -29,49 +30,35 @@
               <li><a href="directorio.html">Directorio</a></li>
               <li><a href="tienda.html">Tienda</a></li>
               <li><a href="micuenta.html">Mi Cuenta</a></li>
-              <li"><input type="text" placeholder="Buscar..."></li>
-              <li><a href="#" class="btn"><button>Buscar</button></a></li>
-           </ul>
+              <li>
+                <input type="text" id="searchInput" placeholder="Buscar anime..." required>
+            </li>
+            <li>
+                <button class="btn" type="button" onclick="searchAnime()">Buscar</button>
+            </li>
+            </ul>
         </nav>
+
+        <script>
+            function searchAnime() {
+                const titulo = document.getElementById('searchInput').value;
+                if (titulo) {
+                    // Redirige a buscar.php con el título como parámetro
+                    window.location.href = `buscar.php?titulo=${encodeURIComponent(titulo)}`;
+                } else {
+                    alert('Por favor, ingresa un título para buscar.');
+                }
+            }
+        </script>
+      
         <a href="index.html" class="btn"><button>Salir</button></a>
     </header>
 
+    <section class="mensaje">
+        <p>¡Gracias por elegir nuestros productos! Tu envío está en proceso.</p>
+    </section>
 
-
-    <div class="container-cuenta">
-      <div class="profile">
-        <div class="profile-info">
-          <img src="imagenes/_d9b34e6b-9f48-4f30-b751-d8d1ddc43735.jpeg" alt="Foto de perfil">
-          <h2>Ragnarok04</h2>
-          <p>Email: orteguitababy@gmail.com</p>
-          <p>Última conexión: 20 de junio de 2024</p>
-          <p>Cuenta premiun</p>
-          <a href="#" class="btn"><button>Configuración</button></a>
-          <a href="login.html" class="btn"><button>Salir</button></a>
-
-        </div>
-        <div class="favorite-animes">
-          <h2>Animes Favoritos</h2>
-          <div class="anime">
-           <a href="https://vww.animeflv.one/anime/one-piece" target="_blank"> <img src="imagenes/one-piece.webp"  alt="one piece" title="one piece"></a>
-            <p><b>#1 One Piece</b></p>
-          </div>
-          <div class="anime">
-           <a href="https://vvv.jkanimes.net/anime/fullmetal-alchemist-brotherhood" target="_blank"> <img src="imagenes/fullmetal-alchemist-brotherhood.webp"  alt="fullmetal-alchemist-brotherhood" title="fullmetal alchemist brotherhood"></a>
-            <p><b>#2 fullmetal alchemist brotherhood</b></p>
-          </div>
-          <div class="anime">
-            <a href="https://www3.animeflv.net/anime/hunter-x-hunter-2011" target="_blank"><img src="imagenes/hunter-x-hunter.webp"  alt="hunter x hunter" title="hunter x hunter"></a>
-            <p><b>#3 Hunter X Hunter</b></p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-
-
-
-    <footer class="footer">
+    <footer class="footer"> 
         <div class="container">
            <div class="footer-row">
      

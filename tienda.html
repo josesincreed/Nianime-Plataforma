@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nianime</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" href="imagenes/iconobueno.ico">
+    <meta name="keywords" content="Anime,Japón,Peliculas,Series,videos,Animacion">
+    <meta name="descripcion" content="Plataforma de entretenimiento de Anime">
+    <meta name="author" content="David Ortega Vergara">
+    <meta name="robot" content="index">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="tienda.css">
+    <link rel="stylesheet" href="shop.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+           <a href="inicio.html">
+              <img src="imagenes/iconobueno.ico" alt="logo de la marca">
+           </a>
+           
+        </div>
+        <nav>
+           <ul class="nav-links">
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="topanime.html">Top Animes</a></li>
+              <li><a href="directorio.html">Directorio</a></li>
+              <li><a href="tienda.html">Tienda</a></li>
+              <li><a href="micuenta.html">Mi Cuenta</a></li>
+              <li>
+                <input type="text" id="searchInput" placeholder="Buscar anime..." required>
+            </li>
+            <li>
+                <button class="btn" type="button" onclick="searchAnime()">Buscar</button>
+            </li>
+            </ul>
+        </nav>
+
+        <script>
+            function searchAnime() {
+                const titulo = document.getElementById('searchInput').value;
+                if (titulo) {
+                    // Redirige a buscar.php con el título como parámetro
+                    window.location.href = `buscar.php?titulo=${encodeURIComponent(titulo)}`;
+                } else {
+                    alert('Por favor, ingresa un título para buscar.');
+                }
+            }
+        </script>
+      
+        <a href="index.html" class="btn"><button>Salir</button></a>
+    </header>
+
+    <div class="form-container">
+        <h1>Formulario de Envío de Productos</h1>
+        <form action="envio_producto.php" method="POST">
+            <label for="nombre_cliente">Nombre Completo:</label>
+            <input type="text" id="nombre_cliente" name="nombre_cliente" required>
+
+            <label for="direccion_cliente">Dirección:</label>
+            <input type="text" id="direccion_cliente" name="direccion_cliente" required>
+
+            <label for="ciudad_cliente">Ciudad:</label>
+            <input type="text" id="ciudad_cliente" name="ciudad_cliente" required>
+
+            <label for="pais_cliente">País:</label>
+            <input type="text" id="pais_cliente" name="pais_cliente" required>
+
+            <label for="telefono_cliente">Teléfono:</label>
+            <input type="text" id="telefono_cliente" name="telefono_cliente" required>
+
+            <label for="correo_cliente">Correo Electrónico:</label>
+            <input type="email" id="correo_cliente" name="correo_cliente" required>
+
+            <label for="fecha_envio">Fecha de Envío:</label>
+            <input type="date" id="fecha_envio" name="fecha_envio" required>
+
+            <!-- Menú desplegable para seleccionar el producto -->
+            <label for="producto">Producto:</label>
+            <select id="producto" name="producto" required>
+                <option value="Figura Naruto">Figura Naruto</option>
+                <option value="Poster One Piece">Poster One Piece</option>
+                <option value="Figura Demon Slayer">Figura Demon Slayer</option>
+                <option value="Poster Totoro">Poster Totoro</option>
+            </select>
+
+            <button type="submit">Enviar Datos</button>
+        </form>
+    </div>
+
+    <div class="store-section">
+        <h2 class="store-header">Tienda de Anime</h2>
+        <div class="product-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="imagenes/figuranaruto.webp" alt="Figura de Naruto" class="product-image">
+                <h3 class="product-title">Figura de Naruto</h3>
+                <p class="product-description">Figura de colección de Naruto Uzumaki.</p>
+                <p class="product-price">$20.00</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+    
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="imagenes/posterluffy.webp" alt="Póster de One Piece" class="product-image">
+                <h3 class="product-title">Póster de One Piece</h3>
+                <p class="product-description">Póster de alta calidad de One Piece.</p>
+                <p class="product-price">$10.00</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+    
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="imagenes/figurademon.webp" alt="Figura de Demon Slayer" class="product-image">
+                <h3 class="product-title">Figura de Demon Slayer</h3>
+                <p class="product-description">Figura de Tanjiro Kamado de Demon Slayer.</p>
+                <p class="product-price">$25.00</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+    
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <img src="imagenes/postertotoro.webp" alt="Póster de Totoro" class="product-image">
+                <h3 class="product-title">Póster de Totoro</h3>
+                <p class="product-description">Póster clásico de "Mi Vecino Totoro".</p>
+                <p class="product-price">$15.00</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="footer"> 
+        <div class="container">
+           <div class="footer-row">
+     
+              <div class="footer-links">
+                 
+                 <h4>Nosotros</h4>
+                 <ul>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Afiliate</a></li>
+                 </ul>
+              </div>
+           </div>
+           <div class="footer-links">
+              
+              <h4>Ayuda</h4>
+              <ul>
+                 <li><a href="#">Preguntas</a></li>
+                 <li><a href="#">Reportar</a></li>
+                 <li><a href="#">Asistencia</a></li>
+              </ul>
+           </div>
+           <div class="footer-links">
+              
+              <h4>Siguenos</h4>
+              <div class="social-link">
+                 <a href="https://www.facebook.com/david.ortegavergara/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.instagram.com/d.orteguita/" target="_blank"><i class="fab fa-instagram"></i></a>
+                 <a href="https://x.com/Zirk208" target="_blank"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.youtube.com/channel/UCGG-EcFAr7n_SOfmRLZ1rcg" target="_blank"><i class="fab fa-youtube"></i></a>
+              </div>
+           </div>
+        </div>
+     
+      </footer>
+</body>
+</html>
+ 
