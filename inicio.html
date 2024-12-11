@@ -28,11 +28,26 @@
               <li><a href="topanime.html">Top Animes</a></li>
               <li><a href="directorio.html">Directorio</a></li>
               <li><a href="micuenta.html">Mi Cuenta</a></li>
-              <li"><input type="text" placeholder="Buscar..."></li>
-              <li><a href="#" class="btn"><button>Buscar</button></a></li>
+              <li>
+                <input type="text" id="searchInput" placeholder="Buscar anime..." required>
+            </li>
+            <li>
+                <button class="btn" type="button" onclick="searchAnime()">Buscar</button>
+            </li>
             </ul>
-
         </nav>
+
+        <script>
+            function searchAnime() {
+                const titulo = document.getElementById('searchInput').value;
+                if (titulo) {
+                    // Redirige a buscar.php con el título como parámetro
+                    window.location.href = `buscar.php?titulo=${encodeURIComponent(titulo)}`;
+                } else {
+                    alert('Por favor, ingresa un título para buscar.');
+                }
+            }
+        </script>
       
         <a href="index.html" class="btn"><button>Salir</button></a>
     </header>
