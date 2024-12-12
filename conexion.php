@@ -1,9 +1,13 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+
 // Configuración de la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "nianime";
+$servername = "sql108.infinityfree.com";   	
+$username = "if0_37901825";
+$password = "0yJMTUdLzC";
+$database = "if0_37901825_nianime";
 
 // Intentar conexión
 $conn = new mysqli($servername, $username, $password, $database);

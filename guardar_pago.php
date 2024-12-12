@@ -1,9 +1,14 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
 // Conexión a la base de datos
-$servername = "localhost";
-$username = "root"; // Cambia si usas un usuario diferente
-$password = "";     // Cambia si tienes contraseña
-$database = "nianime"; // Cambia por el nombre de tu base de datos
+$servername = "sql108.infinityfree.com";
+$username = "if0_37901825";
+$password = "0yJMTUdLzC";     // Cambia si tienes contraseña
+$database = "if0_37901825_nianime"; // Cambia por el nombre de tu base de datos
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -24,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $fecha .= "-01"; // Agregar el día como '01' para cumplir el formato DATE (YYYY-MM-DD)
 
     // Insertar datos en la tabla Medio_pago
-    $sql = "INSERT INTO Medio_pago (medio, nombre, numero, fecha_expiracion, cvv)
+    $sql = "INSERT INTO medio_pago (medio, nombre, numero, fecha_expiracion, cvv)
             VALUES ('$medio', '$nombre', '$numero', '$fecha', '$cvv')";
 
     if ($conn->query($sql) === TRUE) {

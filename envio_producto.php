@@ -1,9 +1,9 @@
 <?php
 // Conexión a la base de datos
-$servername = "localhost";
-$username = "root"; // Cambiar si es necesario
-$password = ""; // Cambiar si es necesario
-$dbname = "nianime"; // Reemplaza con el nombre de tu base de datos
+$servername = "sql108.infinityfree.com";
+$username = "if0_37901825";
+$password = "0yJMTUdLzC"; // Cambiar si es necesario
+$dbname = "if0_37901825_nianime"; // Reemplaza con el nombre de tu base de datos
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
