@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nianime</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" href="imagenes/iconobueno.ico">
+    <meta name="keywords" content="Anime,Japón,Peliculas,Series,videos,Animacion">
+    <meta name="descripcion" content="Plataforma de entretenimiento de Anime">
+    <meta name="author" content="David Ortega Vergara">
+    <meta name="robot" content="index">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="pago.css">
+    <style>
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                padding: 10px;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 0;
+            }
+
+            .nav-links li {
+                display: block;
+                padding: 10px 0;
+            }
+
+            .nav-links li a {
+                font-size: 18px;
+            }
+
+            .btn button {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .anime-card {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .anime-details {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .anime-details img {
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .footer-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-links {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .social-link a {
+                margin: 0 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo, .subtitulo {
+                font-size: 24px;
+            }
+
+            .parrafo {
+                font-size: 18px;
+            }
+
+            .anime-card h3 {
+                font-size: 18px;
+            }
+
+            .anime-card a {
+                font-size: 14px;
+                padding: 5px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+           <a href="inicio.html">
+              <img src="imagenes/iconobueno.ico" alt="logo de la marca">
+           </a>
+           
+        </div>
+        <nav>
+           <ul class="nav-links">
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="topanime.html">Top Animes</a></li>
+              <li><a href="directorio.html">Directorio</a></li>
+              <li><a href="tienda.html">Tienda</a></li>
+              <li><a href="micuenta.html">Mi Cuenta</a></li>
+              <li>
+                <input type="text" id="searchInput" placeholder="Buscar anime..." required>
+            </li>
+            <li>
+                <button class="btn" type="button" onclick="searchAnime()">Buscar</button>
+            </li>
+            </ul>
+        </nav>
+
+        <script>
+            function searchAnime() {
+                const titulo = document.getElementById('searchInput').value;
+                if (titulo) {
+                    // Redirige a buscar.php con el título como parámetro
+                    window.location.href = `buscar.php?titulo=${encodeURIComponent(titulo)}`;
+                } else {
+                    alert('Por favor, ingresa un título para buscar.');
+                }
+            }
+        </script>
+      
+        <a href="index.html" class="btn"><button>Salir</button></a>
+    </header>
+
+    <div class="containerpago">
+        <h2>Información de Pago</h2>
+        <form action="guardar_pago.php" method="POST">
+            <div class="form-group">
+                <label for="medio">Medio de Pago:</label>
+                <select name="medio" id="medio" required>
+                    <option value="">Seleccione un medio</option>
+                    <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre en la Tarjeta:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Juan Pérez" required>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número de Tarjeta:</label>
+                <input type="text" id="numero" name="numero" placeholder="Ejemplo: 1234 5678 9101 1121" maxlength="19" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Expiración:</label>
+                <input type="month" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV (Clave de Seguridad):</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Ejemplo: 123" maxlength="3" required>
+            </div>
+            <button type="submit">Realizar Pago</button>
+        </form>
+    </div>
+    <footer class="footer"> 
+        <div class="container">
+           <div class="footer-row">
+     
+              <div class="footer-links">
+                 
+                 <h4>Nosotros</h4>
+                 <ul>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Afiliate</a></li>
+                 </ul>
+              </div>
+           </div>
+           <div class="footer-links">
+              
+              <h4>Ayuda</h4>
+              <ul>
+                 <li><a href="#">Preguntas</a></li>
+                 <li><a href="#">Reportar</a></li>
+                 <li><a href="#">Asistencia</a></li>
+              </ul>
+           </div>
+           <div class="footer-links">
+              
+              <h4>Siguenos</h4>
+              <div class="social-link">
+                 <a href="https://www.facebook.com/david.ortegavergara/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.instagram.com/d.orteguita/" target="_blank"><i class="fab fa-instagram"></i></a>
+                 <a href="https://x.com/Zirk208" target="_blank"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.youtube.com/channel/UCGG-EcFAr7n_SOfmRLZ1rcg" target="_blank"><i class="fab fa-youtube"></i></a>
+              </div>
+           </div>
+        </div>
+     
+      </footer>
+</body>
+</html>
+ 

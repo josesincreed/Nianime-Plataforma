@@ -26,7 +26,7 @@ $sql = "INSERT INTO datos_envio (nombre_cliente, direccion_cliente, ciudad_clien
         VALUES ('$nombre_cliente', '$direccion_cliente', '$ciudad_cliente', '$pais_cliente', '$telefono_cliente', '$correo_cliente', '$fecha_envio', '$producto')";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: envio.html");
+    header("Location: pago.html");
             exit();
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

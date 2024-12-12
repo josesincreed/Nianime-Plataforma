@@ -1,0 +1,51 @@
+
+.success-container {
+    background-color: #ffffff;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.success-message h1 {
+    color: #4caf50;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.success-message p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.delivery-info h2 {
+    font-size: 1.5em;
+    color: #444;
+    margin: 10px 0;
+}
+
+.delivery-info p {
+    font-size: 1.2em;
+    color: #000;
+}
+
+.return-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.return-home:hover {
+    background-color: #45a049;
+}
